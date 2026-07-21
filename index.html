@@ -1,211 +1,310 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sri Enterprises - Government & Corporate Procurement Solutions. Reliable supplier of IT Equipment, Furniture, Stationery and Office Supplies.">
-    <meta property="og:title" content="Sri Enterprises | Corporate Procurement">
-    <meta property="og:description" content="Government & Corporate Procurement Solutions">
-    <meta property="og:url" content="https://www.srisuppliers.com">
-    <meta property="og:type" content="website">
-    <link rel="canonical" href="https://www.srisuppliers.com/">
-    
-    <title>Sri Enterprises | Government & Corporate Procurement</title>
-    
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome Icons -->
+    <title>Sri Suppliers | Trusted Procurement Partner</title>
+    <!-- Tailwind CSS for Premium Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        corporate: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            600: '#475569',
+                            gold: '#ca8a04'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800">
 
     <!-- Navigation -->
-    <header id="header" class="header">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <span class="logo-mark">SE</span>
-                <div class="logo-text">
-                    <h1>Sri Enterprises</h1>
-                    <p>Government & Corporate Procurement Solutions</p>
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-corporate-900 text-white rounded flex items-center justify-center font-bold text-xl">
+                        SE
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-xl leading-tight text-corporate-900">Sri Suppliers</h1>
+                        <p class="text-xs text-corporate-600 font-medium">A Unit of Sri Enterprises</p>
+                    </div>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-slate-600 hover:text-corporate-gold font-medium transition">Who We Are</a>
+                    <a href="#services" class="text-slate-600 hover:text-corporate-gold font-medium transition">Services</a>
+                    <a href="#process" class="text-slate-600 hover:text-corporate-gold font-medium transition">Process</a>
+                    <a href="#contact" class="bg-corporate-gold hover:bg-yellow-600 text-white px-6 py-2 rounded-md font-semibold transition shadow-lg">Request Quote</a>
                 </div>
-            </a>
-            
-            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-
-            <nav class="main-nav" id="main-nav">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="products.html">Products & Services</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-                <a href="quote.html" class="btn btn-outline-gold nav-btn">Request a Quote</a>
-            </nav>
+            </div>
         </div>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <span class="hero-badge">Enterprise Grade Procurement</span>
-                <h2>Reliable supplier of IT Equipment, Furniture, Stationery and Office Supplies.</h2>
-                <p>Delivering premium corporate solutions to Government Departments, PSUs, Educational Institutions, and Corporate Organizations.</p>
-                
-                <div class="hero-buttons">
-                    <a href="quote.html" class="btn btn-primary">Request a Quote</a>
-                    <a href="https://wa.me/919440473469" class="btn btn-secondary"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-                    <a href="tel:+919440473469" class="btn btn-outline-light"><i class="fa-solid fa-phone"></i> Call Now</a>
+    <section id="home" class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                Trusted Procurement Partner <br class="hidden md:block"/>for Government, PSU & Corporate Organizations
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-300 mb-10 max-w-3xl">
+                Delivering end-to-end procurement solutions across technology, workspace, and business infrastructure.
+            </p>
+            <a href="#contact" class="inline-block bg-corporate-gold hover:bg-yellow-600 text-white text-lg px-8 py-4 rounded-md font-bold transition shadow-lg">
+                Start Sourcing Today
+            </a>
+        </div>
+    </section>
+
+    <!-- Credibility Badges -->
+    <section class="bg-corporate-900 text-white py-6 border-b-4 border-corporate-gold">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-6 gap-4 text-center text-sm md:text-base font-medium">
+                <div class="flex items-center justify-center gap-2"><i class="fa-solid fa-check text-corporate-gold"></i> GST Registered</div>
+                <div class="flex items-center justify-center gap-2"><i class="fa-solid fa-check text-corporate-gold"></i> GeM Seller</div>
+                <div class="flex items-center justify-center gap-2"><i class="fa-solid fa-check text-corporate-gold"></i> PAN India Supply</div>
+                <div class="flex items-center justify-center gap-2"><i class="fa-solid fa-check text-corporate-gold"></i> Multi-brand</div>
+                <div class="flex items-center justify-center gap-2"><i class="fa-solid fa-check text-corporate-gold"></i> Bulk Orders</div>
+                <div class="flex items-center justify-center gap-2"><i class="fa-solid fa-check text-corporate-gold"></i> Govt Procurement</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Are -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-4xl">
+            <h2 class="text-3xl font-bold text-corporate-900 mb-6">Who We Are</h2>
+            <p class="text-lg text-slate-600 mb-4">
+                Operating as the customer-facing brand of <strong>Sri Enterprises</strong>, Sri Suppliers bridges the gap between premium manufacturers and large-scale organizational needs. 
+            </p>
+            <p class="text-lg text-slate-600">
+                We specialize in navigating the complex compliance and volume requirements of Government bodies, PSUs, and modern corporate setups, ensuring a frictionless supply chain from inquiry to installation.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-corporate-900 mb-12">Procurement Categories</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                    <i class="fa-solid fa-laptop-code text-4xl text-corporate-gold mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3">IT Equipment</h3>
+                    <p class="text-slate-600 mb-4">High-performance computing, networking hardware, peripherals, and modern enterprise IT infrastructure.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                    <i class="fa-solid fa-chair text-4xl text-corporate-gold mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3">Office Furniture</h3>
+                    <p class="text-slate-600 mb-4">Ergonomic seating, workstations, storage solutions, and complete meeting room setups.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                    <i class="fa-solid fa-paperclip text-4xl text-corporate-gold mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3">Stationery & Supplies</h3>
+                    <p class="text-slate-600 mb-4">Bulk corporate stationery, printing consumables, and daily administrative supplies.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Core Offerings -->
-    <section class="core-offerings section-padding">
-        <div class="container">
-            <div class="section-heading text-center">
-                <h2>Our Premium Procurement Categories</h2>
-                <p>Sourcing and supplying industry-leading equipment for modern organizations.</p>
-            </div>
+    <!-- Brands We Source -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-corporate-900 mb-4">Authorized Sourcing</h2>
+            <p class="text-slate-600 mb-12">We source genuine products directly from industry-leading brands.</p>
             
-            <div class="grid grid-3">
-                <div class="card premium-card">
-                    <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
-                    <h3>IT Equipment</h3>
-                    <p>High-performance computing, networking hardware, and modern enterprise IT infrastructure.</p>
-                    <a href="products.html" class="card-link">View Details <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-                
-                <div class="card premium-card">
-                    <div class="card-icon"><i class="fa-solid fa-chair"></i></div>
-                    <h3>Corporate Furniture</h3>
-                    <p>Ergonomic office furniture, executive workstations, and customized storage solutions.</p>
-                    <a href="products.html" class="card-link">View Details <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-                
-                <div class="card premium-card">
-                    <div class="card-icon"><i class="fa-solid fa-paperclip"></i></div>
-                    <h3>Stationery & Supplies</h3>
-                    <p>Premium office consumables, paper products, and automation accessories for daily operations.</p>
-                    <a href="products.html" class="card-link">View Details <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
+            <div class="flex flex-wrap justify-center gap-4 md:gap-8">
+                <span class="px-6 py-3 bg-slate-50 text-slate-800 font-bold rounded shadow-sm border border-slate-200">Dell</span>
+                <span class="px-6 py-3 bg-slate-50 text-slate-800 font-bold rounded shadow-sm border border-slate-200">HP</span>
+                <span class="px-6 py-3 bg-slate-50 text-slate-800 font-bold rounded shadow-sm border border-slate-200">Lenovo</span>
+                <span class="px-6 py-3 bg-slate-50 text-slate-800 font-bold rounded shadow-sm border border-slate-200">Canon</span>
+                <span class="px-6 py-3 bg-slate-50 text-slate-800 font-bold rounded shadow-sm border border-slate-200">Epson</span>
+                <span class="px-6 py-3 bg-slate-50 text-slate-800 font-bold rounded shadow-sm border border-slate-200">Logitech</span>
+                <span class="px-6 py-3 bg-slate-50 text-slate-800 font-bold rounded shadow-sm border border-slate-200">APC</span>
+                <span class="px-6 py-3 bg-slate-50 text-slate-800 font-bold rounded shadow-sm border border-slate-200">Godrej</span>
+                <span class="px-6 py-3 bg-slate-50 text-slate-800 font-bold rounded shadow-sm border border-slate-200">Nilkamal</span>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us -->
-    <section class="why-choose-us bg-light section-padding">
-        <div class="container">
-            <div class="section-heading text-center">
-                <h2>Why Choose Sri Enterprises</h2>
-                <p>Committed to excellence, transparency, and timely execution.</p>
-            </div>
+    <!-- Procurement Process -->
+    <section id="process" class="py-20 bg-corporate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-16">Our Procurement Process</h2>
             
-            <div class="grid grid-3">
-                <div class="feature-card">
-                    <i class="fa-solid fa-file-invoice-dollar"></i>
-                    <h4>GST Registered</h4>
-                    <p>Fully compliant with state and central tax regulations (GSTIN: 37AJJPV3881C1ZU).</p>
+            <div class="flex flex-col md:flex-row justify-between items-center relative">
+                <!-- Line connecting steps (Desktop) -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-corporate-600 -z-10 -translate-y-1/2"></div>
+                
+                <!-- Steps -->
+                <div class="text-center mb-8 md:mb-0 bg-corporate-900 px-4">
+                    <div class="w-16 h-16 bg-corporate-gold rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 border-4 border-corporate-900">1</div>
+                    <h4 class="font-bold text-xl">Requirement</h4>
                 </div>
-                <div class="feature-card">
-                    <i class="fa-solid fa-building-flag"></i>
-                    <h4>Government Procurement</h4>
-                    <p>Specialized in fulfilling complex tenders for Government Ministries and PSUs.</p>
+                <div class="hidden md:block text-corporate-600"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="md:hidden text-corporate-600 my-2"><i class="fa-solid fa-arrow-down"></i></div>
+                
+                <div class="text-center mb-8 md:mb-0 bg-corporate-900 px-4">
+                    <div class="w-16 h-16 bg-corporate-gold rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 border-4 border-corporate-900">2</div>
+                    <h4 class="font-bold text-xl">Quotation</h4>
                 </div>
-                <div class="feature-card">
-                    <i class="fa-solid fa-tags"></i>
-                    <h4>Competitive Pricing</h4>
-                    <p>Direct sourcing guarantees scalable, cost-effective corporate pricing models.</p>
+                <div class="hidden md:block text-corporate-600"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="md:hidden text-corporate-600 my-2"><i class="fa-solid fa-arrow-down"></i></div>
+
+                <div class="text-center mb-8 md:mb-0 bg-corporate-900 px-4">
+                    <div class="w-16 h-16 bg-corporate-gold rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 border-4 border-corporate-900">3</div>
+                    <h4 class="font-bold text-xl">Approval</h4>
                 </div>
-                <div class="feature-card">
-                    <i class="fa-solid fa-shield-halved"></i>
-                    <h4>Genuine Products</h4>
-                    <p>100% authentic hardware and supplies backed by manufacturer warranties.</p>
+                <div class="hidden md:block text-corporate-600"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="md:hidden text-corporate-600 my-2"><i class="fa-solid fa-arrow-down"></i></div>
+
+                <div class="text-center mb-8 md:mb-0 bg-corporate-900 px-4">
+                    <div class="w-16 h-16 bg-corporate-gold rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 border-4 border-corporate-900">4</div>
+                    <h4 class="font-bold text-xl">Supply</h4>
                 </div>
-                <div class="feature-card">
-                    <i class="fa-solid fa-truck-fast"></i>
-                    <h4>Fast Delivery</h4>
-                    <p>Optimized logistics networks ensuring strict adherence to delivery schedules.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fa-solid fa-headset"></i>
-                    <h4>Dedicated Support</h4>
-                    <p>Professional account management and swift resolution for enterprise clients.</p>
+                <div class="hidden md:block text-corporate-600"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="md:hidden text-corporate-600 my-2"><i class="fa-solid fa-arrow-down"></i></div>
+
+                <div class="text-center bg-corporate-900 px-4">
+                    <div class="w-16 h-16 bg-corporate-gold rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 border-4 border-corporate-900">5</div>
+                    <h4 class="font-bold text-xl">Delivery</h4>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container cta-container">
-            <div class="cta-text">
-                <h2>Need a quotation?</h2>
-                <p>Streamline your organization's procurement process today. Get competitive pricing tailored to your requirements.</p>
-            </div>
-            <div class="cta-action">
-                <a href="quote.html" class="btn btn-primary btn-large">Request Quote Today</a>
+    <!-- CTA Banner -->
+    <section class="bg-corporate-gold py-16">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Need procurement support?</h2>
+            <p class="text-xl text-yellow-100 mb-8 font-medium">We'll source the right products at competitive prices.</p>
+            <a href="#contact" class="inline-block bg-corporate-900 hover:bg-slate-800 text-white text-lg px-10 py-4 rounded-md font-bold transition shadow-lg">
+                Request a Quotation Today
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-corporate-900 mb-12">Contact Us</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 bg-white p-8 md:p-12 rounded-xl shadow-sm border border-slate-100">
+                
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-slate-100 rounded flex items-center justify-center text-corporate-gold text-xl shrink-0"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1">Call Us</h4>
+                            <p class="text-slate-600">+91 XXXXX XXXXX</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-slate-100 rounded flex items-center justify-center text-green-500 text-xl shrink-0"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1">WhatsApp</h4>
+                            <p class="text-slate-600">+91 XXXXX XXXXX</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-slate-100 rounded flex items-center justify-center text-corporate-gold text-xl shrink-0"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1">Email</h4>
+                            <p class="text-slate-600">procurement@srienterprises.com</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-slate-100 rounded flex items-center justify-center text-corporate-gold text-xl shrink-0"><i class="fa-solid fa-clock"></i></div>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1">Business Hours</h4>
+                            <p class="text-slate-600">Monday - Saturday: 9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map & QR -->
+                <div class="flex flex-col gap-6">
+                    <div class="bg-slate-200 h-64 rounded-lg flex items-center justify-center text-slate-500 text-center p-4 border-2 border-dashed border-slate-300">
+                        <div>
+                            <i class="fa-solid fa-map-location-dot text-4xl mb-2"></i>
+                            <p>Embed Google Maps iframe here</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-200 h-32 w-32 mx-auto rounded-lg flex items-center justify-center text-slate-500 text-center p-4 border-2 border-dashed border-slate-300">
+                        <div class="text-sm">
+                            <i class="fa-solid fa-qrcode text-3xl mb-1"></i>
+                            <p>vCard QR</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-grid">
-            <div class="footer-col brand-col">
-                <a href="index.html" class="logo footer-logo">
-                    <span class="logo-mark">SE</span>
-                    <div class="logo-text">
-                        <h3>Sri Enterprises</h3>
-                        <p>Government & Corporate Procurement Solutions</p>
-                    </div>
-                </a>
-                <p class="footer-desc">Empowering organizations with reliable, premium-grade supplies and IT infrastructure.</p>
+    <footer class="bg-corporate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8">
+            <div>
+                <h4 class="text-white text-xl font-bold mb-4">Sri Suppliers</h4>
+                <p class="text-sm mb-4">A Unit of Sri Enterprises</p>
+                <p class="text-sm">Trusted Procurement Partner for Government, PSU & Corporate Organizations.</p>
             </div>
-            
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="products.html">Products & Services</a></li>
-                    <li><a href="quote.html">Request a Quote</a></li>
+            <div>
+                <h4 class="text-white text-lg font-bold mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#about" class="hover:text-corporate-gold transition">Who We Are</a></li>
+                    <li><a href="#process" class="hover:text-corporate-gold transition">Procurement Process</a></li>
+                    <li><a href="#contact" class="hover:text-corporate-gold transition">Request a Quote</a></li>
                 </ul>
             </div>
-            
-            <div class="footer-col">
-                <h4>Contact Details</h4>
-                <ul class="contact-list">
-                    <li><i class="fa-solid fa-envelope"></i> <a href="mailto:sales@srisuppliers.com">sales@srisuppliers.com</a></li>
-                    <li><i class="fa-solid fa-phone"></i> <a href="tel:+919440473469">+91 9440473469</a></li>
-                    <li><i class="fa-solid fa-globe"></i> www.srisuppliers.com</li>
-                    <li><i class="fa-solid fa-file-contract"></i> GSTIN: 37AJJPV3881C1ZU</li>
+            <div>
+                <h4 class="text-white text-lg font-bold mb-4">Services</h4>
+                <ul class="space-y-2 text-sm">
+                    <li>IT Equipment</li>
+                    <li>Office Furniture</li>
+                    <li>Stationery & Supplies</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white text-lg font-bold mb-4">Legal & Business</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><strong>GSTIN:</strong> 29XXXXXXXXXXXXX</li>
+                    <li><strong>GeM ID:</strong> SE-XXXX-XXXX</li>
+                    <li>Website: www.srienterprises.com</li>
                 </ul>
             </div>
         </div>
-        <div class="footer-bottom container">
-            <p>&copy; <span id="current-year"></span> Sri Enterprises. All rights reserved.</p>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800 text-sm text-center">
+            &copy; 2026 Sri Enterprises. All rights reserved.
         </div>
     </footer>
 
-    <!-- Floating Action Buttons -->
-    <a href="https://wa.me/919440473469" class="floating-btn whatsapp-float" aria-label="WhatsApp Us" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
-    <button id="scrollToTop" class="floating-btn scroll-top-btn" aria-label="Scroll to top">
-        <i class="fa-solid fa-chevron-up"></i>
-    </button>
-
-    <!-- Custom JS -->
-    <script src="assets/js/script.js"></script>
 </body>
 </html>
